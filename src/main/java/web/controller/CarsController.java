@@ -19,8 +19,6 @@ public class CarsController {
     @Autowired
     private HttpServletRequest request;
 
-    @Autowired
-    Car car1, car2, car3;
 
     @RequestMapping(value = "cars", method = RequestMethod.GET)
     public String viewPageCars(ModelMap modelMap) {
@@ -31,9 +29,9 @@ public class CarsController {
         }
 
         List<Car> cars = new ArrayList<>();
-        cars.add(car1);
-        cars.add(car2);
-        cars.add(car3);
+        cars.add(new Car());
+        cars.add(new Car());
+        cars.add(new Car());
 
         if (locale.equals("ru")) {
             modelMap.addAttribute("loc", "МАШИНЫ");

@@ -1,12 +1,7 @@
 package web.model;
-
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-
 import java.util.Random;
 
-@Component
-@Scope(value = "prototype")
+
 public class Car {
     private String brand;
     private String model;
